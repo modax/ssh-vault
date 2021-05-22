@@ -33,3 +33,4 @@ jobs:
         project_path: ./cmd/ssh-vault
         binary_name: ssh-vault
         ldflags: -s -w -X main.version=${{ env.RELEASE_VERSION }}
+        release_tag: develop
