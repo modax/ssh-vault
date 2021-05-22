@@ -1,6 +1,6 @@
 name: build
 
-on: [push, pull_request]
+on: release: types: [created]
 
 jobs:
   releases-matrix:
@@ -33,4 +33,3 @@ jobs:
         project_path: ./cmd/ssh-vault
         binary_name: ssh-vault
         ldflags: -s -w -X main.version=${{ env.RELEASE_VERSION }}
-        release_tag: develop
